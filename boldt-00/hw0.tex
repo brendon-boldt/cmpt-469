@@ -1,0 +1,154 @@
+\documentclass[a4paper]{article}
+\usepackage[letterpaper, margin=1in]{geometry} % page format
+\usepackage{listings} % this package is for including code
+\usepackage{graphicx} % this package is for including figures
+\usepackage{amsmath}  % this package is for math and matrices
+\usepackage{amsfonts} % this package is for math fonts
+\usepackage{tikz} % for drawings
+\usepackage{hyperref} % for urls
+\usepackage{enumitem} % for fancy enumerates
+
+\title{Deep Learning - Homework 0}
+\author{Brendon Boldt}
+\date{Sep/11/2017}
+
+\begin{document}
+\lstset{
+    language=Python,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space} 
+}
+
+\maketitle
+
+\section{Course Preparation}
+
+\subsection{Python Requirements}
+The following source code demonstrates the installation of the required
+Python libraries:
+
+\lstinputlisting[language=Python,frame=single]{hw0.libraries.py}
+
+\begin{lstlisting}
+> python3 hw0.libraries.py
+3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609]
+1.13.1
+0.19.1
+0.19.0
+2.0.2
+0.20.3
+1.3.0
+\end{lstlisting}
+
+\subsection{GitHub Repository}
+
+My GitHub profile can be found at
+\url{https://github.com/brendon-boldt}, 
+and the class repository at
+\url{https://github.com/brendon-boldt/cmpt-469}.
+The following screenshot is not fabricated
+
+\begin{center}
+    \includegraphics[scale=0.5]{{hw0.github-invitation}.png}
+\end{center}
+
+\subsection{Kaggle Account}
+
+My Kaggle username is \texttt{brendonboldt},
+and the following screenshot is taken from my account page:
+
+\begin{center}
+    \includegraphics[scale=0.5]{{hw0.kaggle}.png}
+\end{center}
+
+
+\section{Solution to Problem 1}
+\textit {
+    For the function $g(x) = -3x^2 + 24x - 30$, find the value for $x$ that maximizes $g(x)$.
+} \vspace{5mm}
+
+
+We know that $g'(x) = -6x + 24$; we can then see that $g(x)$ has one critical point at $x = 4$. Since $g'(x) > 0$ for $x < 4$ and $g'(x) < 0$ for $x > 4$ we know that the critical point at $x = 4$ is a local maximum.
+Since $g(x)$ is of degree $2$, it has only one local maximum or minimum; we also know that $\lim_{x \to -\infty} = -\infty$ and $\lim_{x \to \infty} = -\infty$. Thus, the local maximum at $x = 4$ is the global maximum.
+
+\section{Solution to Problem 2}
+\textit{
+    Consider the following function:
+    \[ f(x) = 3x^3_0 - 2x_0x^2_1 + 4x_1 - 8 \]
+    what are the partial derivatives of $f(x)$ with respect to $x_0$ and $x_1$?
+} \vspace{5mm}
+
+It is the case that
+$\frac{\partial f}{\partial x_0} = 9x_0^2 - 2x^2_1$ and
+$\frac{\partial f}{\partial x_1} = -4x_0x_1 + 4$.
+
+
+\section{Solution to Problem 3}
+\textit {
+    Consider the matrix $A = \begin{bmatrix}1&4&-3\\2&-1&3\end{bmatrix}$ and $B = \begin{bmatrix}-2&0&5\\0&-1&4\end{bmatrix}$, then answer the following and verify your answers in Python:
+    \begin{enumerate}[label=(\alph*)]
+        \item can you multiply the two matrices? Elaborate on your answer.
+        \item multiply $A^T$ and $B$ and give its rank.
+        \item let $C = \begin{bmatrix}1&0\\0&2\end{bmatrix}$ be a new matrix; what is the result of $AB^T + C^{-1}$
+    \end{enumerate}
+} \vspace{5mm}
+
+\begin{enumerate}[label=(\alph*)]
+    \item No; it is not possible to multiply a $2 \times 3$ and a $2 \times 3$ matrix.
+    \item
+        \begin{align*}
+            A^TB &= \begin{bmatrix}1&2\\4&-1\\-3&3\end{bmatrix}
+            \begin{bmatrix}-2&0&5\\0&-1&4\end{bmatrix} \\
+            &= \begin{bmatrix}-2+0&0+-2&5+8\\-8+0&0+1&20+-4\\6+0&0+-3&-15+12\end{bmatrix} \\
+            &= \begin{bmatrix}-2&-2&13\\-8&1&16\\6&-3&-3\end{bmatrix}
+        \end{align*}
+    \item 
+        \begin{align*}
+            AB^T + C^{-1} &=
+            \begin{bmatrix}1&4&-3\\2&-1&3\end{bmatrix}
+            \begin{bmatrix}-2&0\\0&-1\\5&4\end{bmatrix}
+            + \frac{1}{2}\begin{bmatrix}2&0\\0&1\end{bmatrix} \\
+            &= \begin{bmatrix}-17&-16\\11&13\end{bmatrix}
+            + \begin{bmatrix}1&0\\0&\frac12\end{bmatrix} \\
+            &= \begin{bmatrix}-16&-16\\11&\frac{27}2\end{bmatrix}
+        \end{align*}
+        
+    The results can be confirmed by running the following code:
+\lstinputlisting{hw0.math.py}
+\begin{lstlisting}[]
+> python3 hw0.math.py
+numpy
+
+a^T b =
+[[ -2.  -2.  13.]
+ [ -8.   1.  16.]
+ [  6.  -3.  -3.]]
+
+a b^T + c^-1 =
+[[-16.  -16. ]
+ [ 11.   13.5]]
+
+tensorflow
+
+a^T x b =
+[[ -2.  -2.  13.]
+ [ -8.   1.  16.]
+ [  6.  -3.  -3.]]
+
+a b^T + c^-1 =
+[[-16.  -16. ]
+ [ 11.   13.5]]
+\end{lstlisting}
+\end{enumerate}
+
+
+\section{Solution to Problem 4}
+\textit{
+    Suppose that random variable $X ~ N(2,3)$. What is the expected value of $X$.
+} \vspace{5mm}
+
+The expected value of $X$ is $2$ since the normal distribution, which is symmetric, described by $X$ is centered about $2$.
+
+\end{document}
