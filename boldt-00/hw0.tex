@@ -104,6 +104,16 @@ $\frac{\partial f}{\partial x_1} = -4x_0x_1 + 4$.
             &= \begin{bmatrix}-2+0&0+-2&5+8\\-8+0&0+1&20+-4\\6+0&0+-3&-15+12\end{bmatrix} \\
             &= \begin{bmatrix}-2&-2&13\\-8&1&16\\6&-3&-3\end{bmatrix}
         \end{align*}
+        We can find the rank as follows:
+        \begin{align*}
+            \begin{bmatrix}-2&-2&13\\-8&1&16\\6&-3&-3\end{bmatrix} \\
+            \begin{bmatrix}-2&-2&13\\0&9&-36\\6&-3&-3\end{bmatrix} \\
+            \begin{bmatrix}-2&-2&13\\0&9&-36\\0&-9&36\end{bmatrix} \\
+            \begin{bmatrix}-2&-2&13\\0&9&-36\\0&0&0\end{bmatrix} \\
+        \end{align*}
+        Thus, the rank of the matrix is $0$, since there are two linearly independent rows. 
+        
+        
     \item 
         \begin{align*}
             AB^T + C^{-1} &=
