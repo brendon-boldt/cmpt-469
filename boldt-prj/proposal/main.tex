@@ -1,0 +1,79 @@
+\documentclass[a4paper]{article}
+\usepackage[letterpaper, margin=1in]{geometry} % page format
+\usepackage{listings} % this package is for including code
+\usepackage{graphicx} % this package is for including figures
+\usepackage{amsmath}  % this package is for math and matrices
+\usepackage{amsfonts} % this package is for math fonts
+\usepackage{tikz} % for drawings
+\usepackage{hyperref} % for urls
+\usepackage{enumitem} % for fancy enumerates
+\usepackage{cite}
+
+\title{Deep Learning - Project Proposal}
+\author{Brendon Boldt}
+\date{Sep/25/2017}
+
+\begin{document}
+\lstset{
+    language=Python,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space} 
+}
+
+% You will activiate the laser beams, and you and you and your knapsack will be shuredded into pieces
+
+\maketitle
+
+\section{Proposal}
+
+For my semester project, I plan to take the Voxelurn natural language system
+and making more robust using vector representation of words
+\cite{DBLP:journals/corr/WangGLM17}
+\cite{DBLP:journals/corr/abs-1301-3781}.
+Voxelurn, at its core, starts with a ``core language'' (which is itself a formal
+language) which is able to describe basic block-building actions
+(e.g., add, remove, select) and allows users to extend the language as they use
+it. This extension consists of allowing users to define new commands in terms
+of already known commands; the newly defined commands are added to the grammar
+of the formal language. The purpose of this extension is that language becomes
+more natural as people use the system.
+
+The words in formal language are simply represented as individual tokens.
+In this way, a command such as ``make red block'' might be recognized while
+something like ``build red block'' would not be recognized at all.
+Using vector representation of words
+would allow the language system to be more robust since words with
+sufficiently similar vectors could be used in place of each other. Thus,
+words like ``make'' and ``build'' could be used in place of each other
+without each command needing to be explicitly learned.
+Normally the right-hand-side of formal language production rules consists
+of strings of symbolic tokens; this approach, instead, would turn the
+right-had-side of production rules into sequences of vectors in order
+to improve the flexibility of the language as a whole.
+
+\section{Tools}
+
+A demo and explanation of Voxelurn (as well as a link to the paper)
+can be found at \url{http://www.voxelurn.com/#/about}. The formal
+language and parsing aspect of the project is based on the SEMPRE
+project from Stanford University. Much of the
+Voxelurn project will be left as-is; though the parser will have
+to be modified in order to support vector representations of words.
+The word vectorization will be based on the TensorFlow machine
+learning library and be derived from the tutorial found at 
+\url{https://www.tensorflow.org/tutorials/word2vec}.
+\section{Datasets}
+
+While I have not completely decided on particular datasets, I hope
+to largely use datasets that do not require extensive preprocessing.
+For the word vectorization, it would be ideal if a standard English corpus (such as the Penn Treebank) could provide the necessary
+vectorization of words. The Voxelurn project also contains sample
+datasets of user-entered commands; these could possibly be augmented
+by replacing words with dictionary synonyms in order to test the
+word vectorization's effectiveness.
+
+\bibliography{bibliography}{}
+\bibliographystyle{plain}
+
+\end{document}
