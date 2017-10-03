@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+\usepackage[letterpaper, margin=1in]{geometry} % page format
+\usepackage{listings} % this package is for including code
+\usepackage{graphicx} % this package is for including figures
+\usepackage{amsmath}  % this package is for math and matrices
+\usepackage{amsfonts} % this package is for math fonts
+\usepackage{tikz} % for drawings
+\usepackage{hyperref} % for urls
+\usepackage{enumitem} % for fancy enumerates
+
+\title{Deep Learning - Homework 1}
+\author{Brendon Boldt}
+\date{Sep/25/2017}
+
+\begin{document}
+\lstset{
+    language=Python,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space} 
+}
+
+\maketitle
+
+\section{CNN Test and Train Information}
+
+The hardware I ran the following tests on was an Nvidia Quadro
+K2200 (the HC0004 machines).
+\subsection{Unmodified Run}
+\begin{itemize}
+    \item Train Time: $264$ seconds
+    \item Test Accuracy: $0.9918$
+\end{itemize}
+
+\subsection{Modified Run v1}
+\begin{itemize}
+    \item Train Time: $196$ seconds
+    \item Test Accuracy: $0.9917$
+    \item Conv1 filters: $32 \rightarrow 16$
+    \item Conv2 size: $5\times5 \rightarrow 3\times3$
+\end{itemize}
+
+\subsection{Modified Run v2}
+\begin{itemize}
+    \item Train Time: $157$ seconds
+    \item Test Accuracy: $0.9897$
+    \item Conv1 filters: $32 \rightarrow 16$
+    \item Conv2 size: $5\times5 \rightarrow 3\times3$
+    \item FC1 size: $1024 \rightarrow 256$
+\end{itemize}
+
+
+%\lstinputlisting[language=Python,frame=single]{hw0.libraries.py}
+
+%\begin{lstlisting} \end{lstlisting}
+
+
+
+
+%\begin{enumerate}[label=(\alph*)]
+
+
+\end{document}
