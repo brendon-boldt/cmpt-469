@@ -1,0 +1,239 @@
+\documentclass[a4paper]{article}
+\usepackage[letterpaper, margin=1in]{geometry} % page format
+\usepackage{listings} % this package is for including code
+\usepackage{graphicx} % this package is for including figures
+\usepackage{amsmath}  % this package is for math and matrices
+\usepackage{amsfonts} % this package is for math fonts
+\usepackage{tikz} % for drawings
+\usepackage{hyperref} % for urls
+\usepackage{enumitem} % for fancy enumerates
+\usepackage{cite}
+\usepackage{syntax}
+\usepackage{scrextend}
+
+\title{Milestone: Augmenting Interactive Semantic Parsing with Word Embeddings}
+\author{Brendon Boldt}
+\date{Nov/13/2017}
+
+\begin{document}
+\lstset{
+    language=Python,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space} 
+}
+
+% You will activate the laser beams, and you and your knapsack will be shuredded into pieces
+
+
+% http://www.aclweb.org/anthology/W14-2405
+% Not sure if this is useful to me
+
+% Look at https://nlp.stanford.edu/pubs/SocherBauerManningNg_ACL2013.pdf
+
+\maketitle
+
+%\cite{DBLP:journals/corr/abs-1301-3781}.
+
+\section*{Abstract}
+
+Semantic parsing provides a powerful way to demonstrate an understanding of a
+natural language utterance since it constructs easily executable formal
+representations from a utterance. One issue with semantic parsing, though,
+is that it treats words merely as tokens and has no mechanism for inferring
+the semantics of an unknown word. Using vector representations of words
+in semantic parsing provides an effective solution to this problem since
+it allows the semantic parser to infer the meaning of new words by comparing
+their similarity to known words. Furthermore, vector word embeddings can
+be learned at a large scale since it is an unsupervised algorithm.
+
+\section{Introduction}
+
+One of the major subfields of natural language processing is natural language
+\textit{understanding} which carries the connotation that the system processing
+the language is able to find meaning in an utterance rather than simply
+searching for keyword occurences or otherwise. % Cite?
+One such method of demonstrating an ``understanding'' of a natural language is
+by having the system in question produce a concrete action or piece of
+information which has semantic matching that of the utterance.
+
+Semantic parsing, on a general level, is an effective way of demonstrating an
+understanding of natural language because it maps utterances to
+formal representations (e.g., lambda-DCS, SQL) based on a formal grammar.
+Semantic parsing has been applied to tasks such as answering questions,
+interpreting email-related commands, and building virtual block structures.
+\cite{AAAI1612383}
+\cite{DBLP:conf/emnlp/BerantCFL13}
+\cite{DBLP:journals/corr/WangGLM17}.
+% In such applications, it useful to map semantic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Like most formal grammars, semantic parsing grammars usually treat each word
+as either a unique or lemmatized\footnote{Lemmatized tokens account for word
+inflections; for example, ``walks'', ``walked'', and ``walking'' would all
+match ``walk'' when lemmatized.} token.
+In this model, each word has no meaning until it is explicitly assigned one
+by the semantics of the grammar.
+
+This inflexibility is important in the contexts of applications like programming
+languages where exactness is expected and required, but this trait is not so
+helpful when parsing natural language.
+For example, a semantic parser might interpret ``select red box'' while not
+understanding ``choose red box'' which, for the large part, mean the same thing.
+Understanding natural language requires flexibility in that words with
+similar meaning should have \textit{some} degree of interchangeability as
+opposed to none which is offered by the typical token-based approach.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It would be better, then, to represent words in a way that would group words
+with similar meanings, and word embeddings, that is, representing words as
+vectors gives us a very efficient way to do this.
+One of the primary advantages of augmenting semantic parsing with word
+embeddings as opposed to dictionary synonyms is that learning the embeddings
+is a unsupervised task which allows it to be done at scale much more easily than
+hand-picking sets of words which are semantically similar enough to a given
+token.
+
+\section{Methodology}
+
+%~%~% Where do I describe Voxelurn?
+For the purposes of this paper, we ill be using the following grammar
+which is a simplified and slightly altered version of the
+of the grammar used in Voxelurn \cite{DBLP:journals/corr/WangGLM17}.
+
+\vspace{5mm}
+\begin{addmargin}[1cm]{0cm}
+    \begin{grammar}
+
+    <Root> ::= <Action>
+
+    <Action> ::= <ActionVerb> <Object>
+    
+    <ActionVerb> ::= `add' | `remove' | `select'
+
+    <Object> ::= <ObjectItem> | <Color> <ObjectItem>
+
+    <ObjectItem> ::= `ball' | `box'
+    
+    <Color> ::= `light' | `dark'
+    
+    \end{grammar}
+\end{addmargin}
+\vspace{5mm}
+
+Using a simple grammar such as the one above allows us to isolate a few grammar
+rules to test the feasibility of using word embeddings to augment semantic
+parsing.
+
+Normally, parsing uses a standard bottom-up approach where the terminal tokens
+are matched with the corresponding tokens in the utterance; if one of the
+tokens in the utterance does not match, the parse will fail.
+In the augmented semantic parser, an unknown token is treated as a wildcard
+so that the parse succeeds. The unknown token is then compared with the
+tokens in the grammar using the word embeddings to determine which grammatical
+token to use.
+
+We are using the GloVe word vector model as a source for word embeddings
+\cite{pennington2014glove}.
+To measure the degree of similarity between two words, we are using the consine
+similarity of two corresponding vectors
+.
+%~%~% Cosine similarity paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%~%~% Paper with similarity metric?
+% https://nlp.stanford.edu/~manning/xyzzy/acl30224.pdf
+
+\section{Experiment}
+
+The experiement will consist of taking valid sentences in the grammar and
+replacing individual words with synonyms and determing whether the augmented
+semantic parser correctly infers the correct parse given the unknow token.
+For example, take the utterance ``build box''; here we have an $\langle ActionVerb\rangle$
+replaced with the word ``build''.
+The parser would make a correct inference if it maps ``build'' to the correct
+grammatical $\langle ActionVerb\rangle$ which would be ``add'' in this case (and not
+``remove'' or ``select'') since ``build'' and ``add'' are loose synonyms.
+For this experiement, WordNet will be used to generate the synonyms.
+
+Further experimentation would involve using human subjects (e.g., using
+Amazon Mechanical Turk) to directly test whether the robustness added by the
+word embeddings is effective or not.
+The effectiveness would be determined by the ability of the semantic parser
+to address the natural variations in language as used by humans rather than
+just the strict synonym replacement demonstrated in this paper.
+
+\section{Discussion}
+
+\section{Conclusion}
+
+
+\section{Progress}
+
+I am currently in the process of modifying the SEMPRE semantic parser to 
+parse an unknown tokens as a wildcard so that the candidate tokens can be
+compared against the unkown token using the word embedding.
+I have currently written the code that does the word embedding comparison based
+on the GloVe pre-trained word embeddings.
+I plan to use WordNet to generate the majority of synonyms that will be used to
+test the word embedding semantic parser;
+specifically, the Java WordNet interface provided here:
+\url{https://rednoise.org/rita/reference/RiWordNet.php}
+will be used.
+
+
+\iffalse
+\section{Proposal}
+
+For my semester project, I plan to take the Voxelurn natural language system
+and making more robust using vector representation of words
+Voxelurn, at its core, starts with a ``core language'' (which is itself a formal
+language) which is able to describe basic block-building actions
+(e.g., add, remove, select) and allows users to extend the language as they use
+it. This extension consists of allowing users to define new commands in terms
+of already known commands; the newly defined commands are added to the grammar
+of the formal language. The purpose of this extension is that language becomes
+more natural as people use the system.
+
+The words in formal language are simply represented as individual tokens.
+In this way, a command such as ``make red block'' might be recognized while
+something like ``build red block'' would not be recognized at all.
+Using vector representation of words
+would allow the language system to be more robust since words with
+sufficiently similar vectors could be used in place of each other. Thus,
+words like ``make'' and ``build'' could be used in place of each other
+without each command needing to be explicitly learned.
+Normally the right-hand-side of formal language production rules consists
+of strings of symbolic tokens; this approach, instead, would turn the
+right-had-side of production rules into sequences of vectors in order
+to improve the flexibility of the language as a whole.
+
+\section{Tools}
+
+A demo and explanation of Voxelurn (as well as a link to the paper)
+can be found at \url{http://www.voxelurn.com/#/about}. The formal
+language and parsing aspect of the project is based on the SEMPRE
+project from Stanford University. Much of the
+Voxelurn project will be left as-is; though the parser will have
+to be modified in order to support vector representations of words.
+The word vectorization will be based on the TensorFlow machine
+learning library and be derived from the tutorial found at 
+\url{https://www.tensorflow.org/tutorials/word2vec}.
+\section{Datasets}
+
+While I have not completely decided on particular datasets, I hope
+to largely use datasets that do not require extensive preprocessing.
+For the word vectorization, it would be ideal if a standard English corpus (such as the Penn Treebank) could provide the necessary
+vectorization of words. The Voxelurn project also contains sample
+datasets of user-entered commands; these could possibly be augmented
+by replacing words with dictionary synonyms in order to test the
+word vectorization's effectiveness.
+\fi
+
+\bibliography{bibliography}{}
+\bibliographystyle{plain}
+
+\end{document}
