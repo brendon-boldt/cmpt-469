@@ -1,0 +1,821 @@
+build,actualise
+build,actualize
+build,arouse
+build,assemble
+build,bear
+build,beat
+build,beget
+build,blast
+build,bring
+build,bring about
+build,bring forth
+build,build
+build,call up
+build,cantilever
+build,cause
+build,channelise
+build,channelize
+build,chop
+build,choreograph
+build,clear
+build,cleave
+build,compose
+build,construct
+build,copy
+build,corduroy
+build,create
+build,create by mental act
+build,create from raw material
+build,create from raw stuff
+build,create mentally
+build,create verbally
+build,customise
+build,customize
+build,cut
+build,derive
+build,direct
+build,distil
+build,distill
+build,do
+build,dry-wall
+build,educe
+build,elicit
+build,engender
+build,enkindle
+build,erect
+build,establish
+build,evoke
+build,extract
+build,father
+build,film
+build,film-make
+build,fire
+build,form
+build,frame
+build,frame up
+build,froth
+build,generate
+build,get
+build,give
+build,give rise
+build,grind
+build,groin
+build,incorporate
+build,initiate
+build,institute
+build,kindle
+build,lay down
+build,lock
+build,make
+build,make for
+build,manufacture
+build,mother
+build,multiply
+build,offset
+build,organise
+build,organize
+build,originate
+build,piece
+build,play
+build,prepare
+build,press
+build,procreate
+build,produce
+build,provoke
+build,puncture
+build,put on
+build,put together
+build,put up
+build,raise
+build,re-create
+build,realise
+build,realize
+build,rear
+build,rebuild
+build,reconstruct
+build,recreate
+build,regenerate
+build,reproduce
+build,revet
+build,scrape
+build,set up
+build,shell
+build,short
+build,short-circuit
+build,sire
+build,spume
+build,start
+build,strike
+build,style
+build,substantiate
+build,suds
+build,summon
+build,tack
+build,tack together
+build,track
+build,turn in
+build,turn out
+build,twine
+build,wattle
+build,work
+build,wreak
+build,write
+build,yield
+remove,ablate
+remove,abrade
+remove,abrase
+remove,abscise
+remove,amputate
+remove,aspirate
+remove,autotomise
+remove,autotomize
+remove,bail
+remove,bail out
+remove,bale out
+remove,bare
+remove,bark
+remove,bone
+remove,break out
+remove,bring out
+remove,brush
+remove,bur
+remove,burl
+remove,burn off
+remove,burr
+remove,burrow
+remove,bus
+remove,cancel
+remove,cart away
+remove,cart off
+remove,carve out
+remove,cast
+remove,cast off
+remove,chafe
+remove,check out
+remove,cheque
+remove,chip away
+remove,chip away at
+remove,circumcise
+remove,clean
+remove,clear
+remove,clear away
+remove,clear off
+remove,clear out
+remove,clear up
+remove,clear-cut
+remove,condense
+remove,corrade
+remove,cream
+remove,cream off
+remove,cross off
+remove,cross out
+remove,crumb
+remove,cut into
+remove,cut off
+remove,cut out
+remove,de-iodinate
+remove,de-ionate
+remove,debone
+remove,decalcify
+remove,decarbonise
+remove,decarbonize
+remove,decarburise
+remove,decarburize
+remove,declaw
+remove,decoke
+remove,decorticate
+remove,defang
+remove,defoliate
+remove,deforest
+remove,defuse
+remove,degas
+remove,deglycerolise
+remove,deglycerolize
+remove,dehorn
+remove,delete
+remove,delouse
+remove,delve
+remove,demagnetise
+remove,demagnetize
+remove,demineralise
+remove,demineralize
+remove,demodulate
+remove,denudate
+remove,denude
+remove,depilate
+remove,deplumate
+remove,deplume
+remove,descale
+remove,desorb
+remove,desquamate
+remove,deterge
+remove,detoxicate
+remove,detoxify
+remove,detusk
+remove,dig
+remove,dip
+remove,disafforest
+remove,disbud
+remove,disburden
+remove,discase
+remove,discharge
+remove,disembowel
+remove,disforest
+remove,disinvest
+remove,dislodge
+remove,dismantle
+remove,displume
+remove,disrobe
+remove,ditch
+remove,divert
+remove,divest
+remove,doff
+remove,draw
+remove,draw away
+remove,draw off
+remove,draw out
+remove,dredge
+remove,drive
+remove,drive out
+remove,drop
+remove,efface
+remove,eliminate
+remove,empty
+remove,enucleate
+remove,epilate
+remove,erase
+remove,eviscerate
+remove,excavate
+remove,excise
+remove,excoriate
+remove,exenterate
+remove,exfoliate
+remove,expectorate
+remove,expunge
+remove,extirpate
+remove,extract
+remove,exuviate
+remove,fan
+remove,flay
+remove,flick
+remove,free
+remove,furrow
+remove,get out
+remove,groove
+remove,gut
+remove,harvest
+remove,haul away
+remove,haul off
+remove,head
+remove,hive off
+remove,hollow
+remove,hull
+remove,husk
+remove,hypophysectomise
+remove,hypophysectomize
+remove,kill
+remove,knock out
+remove,lade
+remove,laden
+remove,ladle
+remove,leach
+remove,lift
+remove,lift out
+remove,lighten
+remove,mark
+remove,milk
+remove,molt
+remove,moult
+remove,muck
+remove,obliterate
+remove,offload
+remove,offsaddle
+remove,overdraw
+remove,pare
+remove,peel
+remove,peel off
+remove,pick
+remove,pit
+remove,pluck
+remove,pod
+remove,pull
+remove,pull off
+remove,pull out
+remove,pull up
+remove,pulp
+remove,pump
+remove,rack
+remove,rasp
+remove,ream
+remove,remove
+remove,resect
+remove,ridge
+remove,rip off
+remove,rip out
+remove,root
+remove,rootle
+remove,rout
+remove,rub down
+remove,rub off
+remove,rub out
+remove,rut
+remove,scale
+remove,scalp
+remove,scavenge
+remove,scoop
+remove,scoop out
+remove,scoop up
+remove,score out
+remove,scratch
+remove,scratch out
+remove,seed
+remove,shake off
+remove,shed
+remove,shell
+remove,shovel
+remove,shuck
+remove,siphon
+remove,siphon off
+remove,skim
+remove,skim off
+remove,skin
+remove,slip off
+remove,slop
+remove,slough
+remove,slough off
+remove,sluice
+remove,spade
+remove,spirit away
+remove,spirit off
+remove,sponge
+remove,spoon
+remove,squeeze out
+remove,stem
+remove,stone
+remove,strike
+remove,strike off
+remove,strike out
+remove,string
+remove,strip
+remove,strip down
+remove,stub
+remove,stump
+remove,suck
+remove,suck out
+remove,syphon
+remove,take
+remove,take away
+remove,take off
+remove,take out
+remove,take up
+remove,tap
+remove,tear
+remove,tear away
+remove,tear off
+remove,tear out
+remove,thread
+remove,throw
+remove,throw away
+remove,throw off
+remove,tip
+remove,trench
+remove,trowel
+remove,tunnel
+remove,turn over
+remove,tusk
+remove,unbox
+remove,unburden
+remove,uncase
+remove,uncloak
+remove,unclothe
+remove,uncrate
+remove,undock
+remove,undress
+remove,unhinge
+remove,unlade
+remove,unload
+remove,unpack
+remove,unsaddle
+remove,unsheathe
+remove,unstring
+remove,unveil
+remove,wash
+remove,wash away
+remove,wash off
+remove,wash out
+remove,wear away
+remove,wear off
+remove,weed
+remove,whisk away
+remove,whisk off
+remove,winkle
+remove,winkle out
+remove,winnow
+remove,wipe away
+remove,wipe off
+remove,wipe out
+remove,withdraw
+remove,wring out
+find,accept
+find,acquire
+find,attain
+find,benefit
+find,borrow
+find,bring in
+find,buy
+find,call for
+find,capture
+find,catch
+find,chance on
+find,chance upon
+find,charter
+find,clear
+find,collect
+find,come across
+find,come by
+find,come into
+find,come up
+find,come upon
+find,discover
+find,earn
+find,engage
+find,enter upon
+find,express
+find,extract
+find,fall upon
+find,feel
+find,find
+find,gain
+find,garner
+find,gather up
+find,get
+find,get back
+find,get hold
+find,glom
+find,happen upon
+find,have
+find,hire
+find,inherit
+find,isolate
+find,lease
+find,light upon
+find,line up
+find,locate
+find,luck into
+find,make
+find,nail
+find,obtain
+find,partake
+find,partake in
+find,pick up
+find,pinpoint
+find,poll
+find,preempt
+find,press out
+find,profit
+find,pull in
+find,purchase
+find,realise
+find,realize
+find,receive
+find,reclaim
+find,recoup
+find,recover
+find,recuperate
+find,regain
+find,rent
+find,repossess
+find,retrieve
+find,rout out
+find,rout up
+find,share
+find,strike
+find,take
+find,take in
+find,turn
+find,turn up
+find,unearth
+find,win
+find,win back
+box,dumpster
+box,alms box
+box,ammunition chest
+box,bag
+box,ballot box
+box,bandbox
+box,bank
+box,basket
+box,bier
+box,bin
+box,bowl
+box,box
+box,bread-bin
+box,breadbox
+box,bunker
+box,caisson
+box,can
+box,canister
+box,cannister
+box,capsule
+box,cargo container
+box,carton
+box,case
+box,cash register
+box,cashbox
+box,casket
+box,cassette
+box,cast
+box,cedar chest
+box,cereal box
+box,chest
+box,cigar box
+box,circular file
+box,coal scuttle
+box,coffer
+box,coffin
+box,coin bank
+box,crate
+box,cup
+box,cylinder
+box,deedbox
+box,deposit box
+box,dice box
+box,dice cup
+box,dish
+box,dispenser
+box,display case
+box,drawer
+box,drinking glass
+box,empty
+box,envelope
+box,flat
+box,flowerpot
+box,fuel pod
+box,glass
+box,grab bag
+box,handbag
+box,handbasket
+box,hod
+box,hope chest
+box,jewel casket
+box,letter box
+box,lockbox
+box,magnetic bottle
+box,mailbox
+box,mailer
+box,manger
+box,matchbox
+box,measure
+box,mite box
+box,mold
+box,money box
+box,mould
+box,package
+box,packing box
+box,packing case
+box,paintbox
+box,pan
+box,parcel
+box,pencil box
+box,pencil case
+box,pipe bowl
+box,pix
+box,pix chest
+box,play-box
+box,playbox
+box,pocketbook
+box,pod
+box,poor box
+box,pot
+box,powder flask
+box,powder horn
+box,purse
+box,pyx
+box,pyx chest
+box,pyxis
+box,receptacle
+box,register
+box,reliquary
+box,safe
+box,safe-deposit
+box,safe-deposit box
+box,safety deposit box
+box,safety-deposit
+box,saltcellar
+box,sarcophagus
+box,savings bank
+box,scuttle
+box,sea chest
+box,shadow box
+box,shaker
+box,shoebox
+box,showcase
+box,six pack
+box,six-pack
+box,sixpack
+box,snuffbox
+box,soapbox
+box,spoon
+box,storage ring
+box,strongbox
+box,tea chest
+box,thimble
+box,till
+box,time capsule
+box,tin
+box,tin can
+box,tinderbox
+box,tool cabinet
+box,tool case
+box,tool chest
+box,toolbox
+box,toy box
+box,toy chest
+box,treasure chest
+box,trough
+box,tuck box
+box,vessel
+box,vitrine
+box,waste basket
+box,waste-paper basket
+box,wastebasket
+box,wastepaper basket
+box,watering can
+box,watering pot
+box,wedding chest
+box,wheeled vehicle
+box,window box
+box,workbag
+box,workbasket
+box,workbox
+bar,anvil
+bar,bar
+bar,briquet
+bar,briquette
+bar,cake
+bar,chock
+bar,chopping block
+bar,crosshead
+bar,cube
+bar,domino
+bar,ingot
+bar,inking pad
+bar,inkpad
+bar,nog
+bar,nut
+bar,pad
+bar,slab
+bar,square block
+bar,stamp pad
+bar,starting block
+bar,step
+bar,swage block
+bar,tablet
+bar,type
+bar,wedge
+large,Brobdingnagian
+large,ample
+large,astronomic
+large,astronomical
+large,banging
+large,bear-sized
+large,big
+large,bigger
+large,biggish
+large,blown-up
+large,bouffant
+large,broad
+large,bulky
+large,capacious
+large,colossal
+large,cosmic
+large,deep
+large,double
+large,elephantine
+large,enlarged
+large,enormous
+large,epic
+large,extended
+large,extensive
+large,full-size
+large,galactic
+large,gargantuan
+large,giant
+large,gigantic
+large,grand
+large,great
+large,heroic
+large,huge
+large,hulking
+large,hulky
+large,humongous
+large,immense
+large,jumbo
+large,king-size
+large,king-sized
+large,large
+large,large-mouthed
+large,large-scale
+large,larger
+large,larger-than-life
+large,largish
+large,life-size
+large,life-sized
+large,lifesize
+large,macro
+large,macroscopic
+large,macroscopical
+large,mammoth
+large,man-sized
+large,massive
+large,medium-large
+large,monolithic
+large,monstrous
+large,monumental
+large,mountainous
+large,outsize
+large,outsized
+large,overlarge
+large,oversize
+large,oversized
+large,plumping
+large,prodigious
+large,puffy
+large,queen-size
+large,queen-sized
+large,rangy
+large,sizable
+large,sizeable
+large,spacious
+large,stupendous
+large,super
+large,thumping
+large,titanic
+large,too large
+large,tremendous
+large,vast
+large,volumed
+large,voluminous
+large,walloping
+large,whacking
+large,whopping
+large,wide
+large,wide-ranging
+medium,average
+medium,intermediate
+medium,medium
+medium,moderate
+small,atomic
+small,bantam
+small,bittie
+small,bitty
+small,diminutive
+small,dinky
+small,dwarfish
+small,elfin
+small,elflike
+small,flyspeck
+small,gnomish
+small,half-size
+small,infinitesimal
+small,insignificant
+small,itsy-bitsy
+small,itty-bitty
+small,lesser
+small,lilliputian
+small,little
+small,littler
+small,micro
+small,microscopic
+small,microscopical
+small,midget
+small,miniature
+small,miniscule
+small,minuscule
+small,minute
+small,olive-sized
+small,petite
+small,pocket-size
+small,pocket-sized
+small,pocketable
+small,puny
+small,runty
+small,shrimpy
+small,slender
+small,slim
+small,small
+small,small-scale
+small,smaller
+small,smallish
+small,subatomic
+small,teensy
+small,teensy-weensy
+small,teentsy
+small,teeny
+small,teeny-weeny
+small,tiny
+small,undersize
+small,undersized
+small,wee
+small,weensy
+small,weeny
